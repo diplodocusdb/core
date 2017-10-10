@@ -23,4 +23,14 @@
 #ifndef _DIPLODOCUSDB_CORE_PRIMITIVEDATATYPES_H_
 #define _DIPLODOCUSDB_CORE_PRIMITIVEDATATYPES_H_
 
+namespace DiplodocusDB
+{
+
+enum EPrimitiveDataTypes
+{
+    eUTF8String
+};
+
+}
+
 #endif

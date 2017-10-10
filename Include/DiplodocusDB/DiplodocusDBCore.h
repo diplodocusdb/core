@@ -23,4 +23,6 @@
 #ifndef _DIPLODOCUSDB_DIPLODOCUSDBCORE_H_
 #define _DIPLODOCUSDB_DIPLODOCUSDBCORE_H_
 
+#include "Core/PrimitiveDataTypes.h"
+
 #endif
