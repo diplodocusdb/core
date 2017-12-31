@@ -1,0 +1,11 @@
+setting DIPLODOCUSDB_CORE_ROOT
+{
+    help = "Path to the DiplodocusDB installation";
+    default = '$(DIPLODOCUSDB)/Core';
+}
+
+template DiplodocusDBCore
+{
+    includedirs += $(DIPLODOCUSDB_CORE_ROOT)/Include;
+    libdirs += $(DIPLODOCUSDB_CORE_ROOT)/Lib/$(arch);
+}
