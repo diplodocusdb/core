@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2018 Xavier Leclercq
+    Copyright (c) 2015-2018 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -21,3 +21,32 @@
 */
 
 #include "VersionNumber.h"
+#include <sstream>
+
+namespace DiplodocusDB
+{
+
+VersionNumber::VersionNumber(unsigned int major,
+                             unsigned int minor,
+                             unsigned int build)
+{
+    m_number.push_back(major);
+    m_number.push_back(minor);
+    m_number.push_back(build);
+}
+
+std::string VersionNumber::toString() const
+{
+    std::stringstream result;
+    for (size_t i = 0; i < m_number.size(); ++i)
+    {
+        if (i != 0)
+        {
+            result << ".";
+        }
+        result << m_number[i];
+    }
+    return result.str();
+}
+
+}

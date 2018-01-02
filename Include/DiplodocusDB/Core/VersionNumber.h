@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2018 Xavier Leclercq
+    Copyright (c) 2015-2018 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -22,5 +22,24 @@
 
 #ifndef _DIPLODOCUSDB_CORE_VERSIONNUMBER_H_
 #define _DIPLODOCUSDB_CORE_VERSIONNUMBER_H_
+
+#include <vector>
+
+namespace DiplodocusDB
+{
+
+class VersionNumber
+{
+public:
+    VersionNumber(unsigned int major, unsigned int minor, unsigned int build);
+    ~VersionNumber() = default;
+
+    std::string toString() const;
+
+private:
+    std::vector<unsigned int> m_number;
+};
+
+}
 
 #endif
