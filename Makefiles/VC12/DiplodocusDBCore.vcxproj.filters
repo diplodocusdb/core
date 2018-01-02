@@ -23,5 +23,13 @@
     <ClInclude Include="..\..\Include\DiplodocusDB\Core\PrimitiveDataTypes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Include\DiplodocusDB\Core\VersionNumber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\VersionNumber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
