@@ -26,6 +26,9 @@
     <ClInclude Include="..\..\Include\DiplodocusDB\Core\VersionNumber.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Include\DiplodocusDB\Core\linkoptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\VersionNumber.cpp">

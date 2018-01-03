@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2017-2018 Xavier Leclercq
+    Copyright (c) 2018 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -20,11 +20,13 @@
     IN THE SOFTWARE.
 */
 
-#ifndef _DIPLODOCUSDB_DIPLODOCUSDBCORE_H_
-#define _DIPLODOCUSDB_DIPLODOCUSDBCORE_H_
+#ifndef _DIPLODOCUSDB_CORE_LINKOPTIONS_H_
+#define _DIPLODOCUSDB_CORE_LINKOPTIONS_H_
 
-#include "Core/PrimitiveDataTypes.h"
-
-#include "Core/linkoptions.h"
+#ifdef _DEBUG
+#pragma comment(lib, "DiplodocusDBCore-d.lib")
+#else
+#pragma comment(lib, "DiplodocusDBCore.lib")
+#endif
 
 #endif
