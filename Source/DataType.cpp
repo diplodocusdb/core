@@ -21,3 +21,18 @@
 */
 
 #include "DataType.h"
+
+namespace DiplodocusDB
+{
+
+DataType::DataType(EPrimitiveDataType primitiveType)
+    : m_primitiveType(primitiveType)
+{
+}
+
+EPrimitiveDataType DataType::primitiveType() const
+{
+    return m_primitiveType;
+}
+
+}

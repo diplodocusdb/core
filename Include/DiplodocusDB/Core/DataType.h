@@ -23,4 +23,23 @@
 #ifndef _DIPLODOCUSDB_CORE_DATATYPE_H_
 #define _DIPLODOCUSDB_CORE_DATATYPE_H_
 
+#include "PrimitiveDataType.h"
+
+namespace DiplodocusDB
+{
+
+class DataType
+{
+public:
+    DataType(EPrimitiveDataType primitiveType);
+    ~DataType() = default;
+
+    EPrimitiveDataType primitiveType() const;
+
+private:
+    EPrimitiveDataType m_primitiveType;
+};
+
+}
+
 #endif
