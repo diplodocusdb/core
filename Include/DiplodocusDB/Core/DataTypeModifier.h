@@ -28,7 +28,8 @@ namespace DiplodocusDB
 
 enum class EDataTypeModifier
 {
-    eNone
+    eNone,
+    eList
 };
 
 }

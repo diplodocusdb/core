@@ -24,6 +24,7 @@
 #define _DIPLODOCUSDB_CORE_DATATYPE_H_
 
 #include "PrimitiveDataType.h"
+#include "DataTypeModifier.h"
 
 namespace DiplodocusDB
 {
@@ -32,12 +33,15 @@ class DataType
 {
 public:
     DataType(EPrimitiveDataType primitiveType);
+    DataType(EPrimitiveDataType primitiveType, EDataTypeModifier modifier);
     ~DataType() = default;
 
     EPrimitiveDataType primitiveType() const;
+    EDataTypeModifier modifier() const;
 
 private:
     EPrimitiveDataType m_primitiveType;
+    EDataTypeModifier m_modifier;
 };
 
 }
