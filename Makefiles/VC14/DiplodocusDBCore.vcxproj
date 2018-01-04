@@ -150,11 +150,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\DataType.cpp" />
     <ClCompile Include="..\..\Source\VersionNumber.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Include\DiplodocusDB\DiplodocusDBCore.h" />
-    <ClInclude Include="..\..\Include\DiplodocusDB\Core\PrimitiveDataTypes.h" />
+    <ClInclude Include="..\..\Include\DiplodocusDB\Core\PrimitiveDataType.h" />
+    <ClInclude Include="..\..\Include\DiplodocusDB\Core\DataTypeModifier.h" />
+    <ClInclude Include="..\..\Include\DiplodocusDB\Core\DataType.h" />
     <ClInclude Include="..\..\Include\DiplodocusDB\Core\VersionNumber.h" />
     <ClInclude Include="..\..\Include\DiplodocusDB\Core\linkoptions.h" />
   </ItemGroup>

@@ -20,7 +20,13 @@
     <ClInclude Include="..\..\Include\DiplodocusDB\DiplodocusDBCore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Include\DiplodocusDB\Core\PrimitiveDataTypes.h">
+    <ClInclude Include="..\..\Include\DiplodocusDB\Core\PrimitiveDataType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\DiplodocusDB\Core\DataTypeModifier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\DiplodocusDB\Core\DataType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Include\DiplodocusDB\Core\VersionNumber.h">
@@ -31,6 +37,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\DataType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\VersionNumber.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

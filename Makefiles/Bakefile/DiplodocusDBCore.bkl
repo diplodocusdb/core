@@ -29,13 +29,16 @@ library DiplodocusDBCore
     headers
     {
         ../../Include/DiplodocusDB/DiplodocusDBCore.h
-        ../../Include/DiplodocusDB/Core/PrimitiveDataTypes.h
+        ../../Include/DiplodocusDB/Core/PrimitiveDataType.h
+        ../../Include/DiplodocusDB/Core/DataTypeModifier.h
+        ../../Include/DiplodocusDB/Core/DataType.h
         ../../Include/DiplodocusDB/Core/VersionNumber.h
         ../../Include/DiplodocusDB/Core/linkoptions.h
     }
 
     sources
     {
+        ../../Source/DataType.cpp
         ../../Source/VersionNumber.cpp
     }
 }

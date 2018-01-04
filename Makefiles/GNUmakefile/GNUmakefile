@@ -56,9 +56,12 @@ $(if $(_builddir_error),$(error Failed to create build directory: $(_builddir_er
 endif
 all: ../Bakefile/../../Lib/lib$(if $(call _equal,$(config),Debug),DiplodocusDBCore-d,DiplodocusDBCore).a
 
-../Bakefile/../../Lib/lib$(if $(call _equal,$(config),Debug),DiplodocusDBCore-d,DiplodocusDBCore).a: $(_builddir)DiplodocusDBCore_VersionNumber.o
-	$(AR) rcu $@ $(_builddir)DiplodocusDBCore_VersionNumber.o
+../Bakefile/../../Lib/lib$(if $(call _equal,$(config),Debug),DiplodocusDBCore-d,DiplodocusDBCore).a: $(_builddir)DiplodocusDBCore_DataType.o $(_builddir)DiplodocusDBCore_VersionNumber.o
+	$(AR) rcu $@ $(_builddir)DiplodocusDBCore_DataType.o $(_builddir)DiplodocusDBCore_VersionNumber.o
 	$(RANLIB) $@
+
+$(_builddir)DiplodocusDBCore_DataType.o: ../../Source/DataType.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I../../Include/DiplodocusDB/Core -std=c++11 ../../Source/DataType.cpp
 
 $(_builddir)DiplodocusDBCore_VersionNumber.o: ../../Source/VersionNumber.cpp
 	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I../../Include/DiplodocusDB/Core -std=c++11 ../../Source/VersionNumber.cpp

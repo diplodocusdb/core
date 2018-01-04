@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2017 Xavier Leclercq
+    Copyright (c) 2018 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -20,18 +20,4 @@
     IN THE SOFTWARE.
 */
 
-#ifndef _DIPLODOCUSDB_CORE_PRIMITIVEDATATYPES_H_
-#define _DIPLODOCUSDB_CORE_PRIMITIVEDATATYPES_H_
-
-namespace DiplodocusDB
-{
-
-enum EPrimitiveDataTypes
-{
-    eNULL,
-    eUTF8String
-};
-
-}
-
-#endif
+#include "DataType.h"

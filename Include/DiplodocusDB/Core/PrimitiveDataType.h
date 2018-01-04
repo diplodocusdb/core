@@ -20,13 +20,18 @@
     IN THE SOFTWARE.
 */
 
-#ifndef _DIPLODOCUSDB_DIPLODOCUSDBCORE_H_
-#define _DIPLODOCUSDB_DIPLODOCUSDBCORE_H_
+#ifndef _DIPLODOCUSDB_CORE_PRIMITIVEDATATYPE_H_
+#define _DIPLODOCUSDB_CORE_PRIMITIVEDATATYPE_H_
 
-#include "Core/PrimitiveDataType.h"
-#include "Core/DataTypeModifier.h"
-#include "Core/DataType.h"
+namespace DiplodocusDB
+{
 
-#include "Core/linkoptions.h"
+enum class EPrimitiveDataType
+{
+    eNULL,
+    eUTF8String
+};
+
+}
 
 #endif
