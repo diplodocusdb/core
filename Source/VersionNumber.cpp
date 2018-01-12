@@ -35,6 +35,11 @@ VersionNumber::VersionNumber(unsigned int major,
     m_number.push_back(build);
 }
 
+const std::vector<unsigned int>& VersionNumber::value() const
+{
+    return m_number;
+}
+
 std::string VersionNumber::toString() const
 {
     std::stringstream result;

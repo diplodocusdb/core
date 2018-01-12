@@ -34,6 +34,8 @@ public:
     VersionNumber(unsigned int major, unsigned int minor, unsigned int build);
     ~VersionNumber() = default;
 
+    const std::vector<unsigned int>& value() const;
+
     std::string toString() const;
 
 private:
