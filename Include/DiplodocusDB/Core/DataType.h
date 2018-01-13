@@ -39,6 +39,9 @@ public:
     EPrimitiveDataType primitiveType() const;
     EDataTypeModifier modifier() const;
 
+    bool operator ==(const DataType& other) const;
+    bool operator !=(const DataType& other) const;
+
 private:
     EPrimitiveDataType m_primitiveType;
     EDataTypeModifier m_modifier;

@@ -46,4 +46,15 @@ EDataTypeModifier DataType::modifier() const
     return m_modifier;
 }
 
+bool DataType::operator ==(const DataType& other) const
+{
+    return ((m_primitiveType == other.m_primitiveType) &&
+        (m_modifier == other.m_modifier));
+}
+
+bool DataType::operator !=(const DataType& other) const
+{
+    return !(*this == other);
+}
+
 }
