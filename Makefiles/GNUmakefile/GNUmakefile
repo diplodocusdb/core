@@ -57,7 +57,7 @@ endif
 all: ../Bakefile/../../Lib/lib$(if $(call _equal,$(config),Debug),DiplodocusDBCore-d,DiplodocusDBCore).a
 
 ../Bakefile/../../Lib/lib$(if $(call _equal,$(config),Debug),DiplodocusDBCore-d,DiplodocusDBCore).a: $(_builddir)DiplodocusDBCore_DataType.o $(_builddir)DiplodocusDBCore_VersionNumber.o
-	$(AR) rcu $@ $(_builddir)DiplodocusDBCore_DataType.o $(_builddir)DiplodocusDBCore_VersionNumber.o
+	$(AR) rc $@ $(_builddir)DiplodocusDBCore_DataType.o $(_builddir)DiplodocusDBCore_VersionNumber.o
 	$(RANLIB) $@
 
 $(_builddir)DiplodocusDBCore_DataType.o: ../../Source/DataType.cpp
