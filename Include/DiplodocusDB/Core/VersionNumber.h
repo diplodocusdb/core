@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2015-2018 Xavier Leclercq
+    Copyright (c) 2015-2019 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -24,6 +24,7 @@
 #define _DIPLODOCUSDB_CORE_VERSIONNUMBER_H_
 
 #include <vector>
+#include <string>
 
 namespace DiplodocusDB
 {

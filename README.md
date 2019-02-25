@@ -2,9 +2,28 @@
 
 This repository contains fundamental classes used by the various DiplodocusDB projects.
 
+# Contents
+
+- Include - Directory containing the public headers for the project.
+- Lib - Directory where the build process puts the compiled libraries.
+- Makefiles - The makefiles used to build the project
+- Source - The source code for the prokect.
+
+# Project Status
+
+This project is intended for use by its author only.
+
+# Usage
+
+No documentation available as of yet.
+
+# Support
+
+None.
+
 ## License
 
-Copyright (c) 2015-2018 Xavier Leclercq
+Copyright (c) 2015-2019 Xavier Leclercq
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),
