@@ -29,6 +29,7 @@ namespace DiplodocusDB
 enum class EPrimitiveDataType
 {
     eNULL,
+    eInt8,
     eInt32,
     eUTF8String
 };
