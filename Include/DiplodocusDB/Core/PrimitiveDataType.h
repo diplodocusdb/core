@@ -29,7 +29,7 @@ namespace DiplodocusDB
 enum class EPrimitiveDataType
 {
     eNULL = 0,
-    eBinary = 0x01
+    eBinary = 0x01,
     eBoolean = 0x02,
     eUTF8String = 0x03,
     eInt8 = 0x10,
@@ -41,7 +41,7 @@ enum class EPrimitiveDataType
     eUnsignedInt16 = 0x19,
     eUnsignedInt32 = 0x1A,
     eUnsignedInt64 = 0x1B,
-    eUnsignedInt = 0x1F
+    eUnsignedInt = 0x1F,
     eUTCDateTime = 0x20
 };
 
