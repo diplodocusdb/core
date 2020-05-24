@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ishikocpp/gcc-boost:9.1.0-1.70.0
+    steps:
+      - checkout:
+          path: /DiplodocusDB/Core
+      - run:
+          name: Build
+          command: cd /DiplodocusDB/Core/Makefiles/GNUmakefile && make
