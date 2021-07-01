@@ -88,7 +88,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>..\..\Include\DiplodocusDB\Core</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include\DiplodocusDB\Core</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -103,7 +103,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>..\..\Include\DiplodocusDB\Core</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include\DiplodocusDB\Core</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -120,7 +120,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>..\..\Include\DiplodocusDB\Core</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include\DiplodocusDB\Core</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -139,7 +139,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>..\..\Include\DiplodocusDB\Core</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include\DiplodocusDB\Core</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -154,12 +154,12 @@
     <ClCompile Include="..\..\Source\VersionNumber.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Include\DiplodocusDB\DiplodocusDBCore.h" />
-    <ClInclude Include="..\..\Include\DiplodocusDB\Core\PrimitiveDataType.h" />
-    <ClInclude Include="..\..\Include\DiplodocusDB\Core\DataTypeModifier.h" />
-    <ClInclude Include="..\..\Include\DiplodocusDB\Core\DataType.h" />
-    <ClInclude Include="..\..\Include\DiplodocusDB\Core\VersionNumber.h" />
-    <ClInclude Include="..\..\Include\DiplodocusDB\Core\linkoptions.h" />
+    <ClInclude Include="..\..\include\DiplodocusDB\DiplodocusDBCore.h" />
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\PrimitiveDataType.h" />
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\DataTypeModifier.h" />
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\DataType.h" />
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\VersionNumber.h" />
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\linkoptions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

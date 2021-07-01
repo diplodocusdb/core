@@ -61,10 +61,10 @@ all: ../Bakefile/../../Lib/lib$(if $(call _equal,$(config),Debug),DiplodocusDBCo
 	$(RANLIB) $@
 
 $(_builddir)DiplodocusDBCore_DataType.o: ../../Source/DataType.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I../../Include/DiplodocusDB/Core -std=c++11 ../../Source/DataType.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I../../include/DiplodocusDB/Core -std=c++11 ../../Source/DataType.cpp
 
 $(_builddir)DiplodocusDBCore_VersionNumber.o: ../../Source/VersionNumber.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I../../Include/DiplodocusDB/Core -std=c++11 ../../Source/VersionNumber.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I../../include/DiplodocusDB/Core -std=c++11 ../../Source/VersionNumber.cpp
 
 clean:
 	rm -f $(_builddir)*.o
