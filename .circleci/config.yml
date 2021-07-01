@@ -5,7 +5,7 @@ jobs:
       - image: ishiko/gcc-ishiko-cpp:0.1.0
     steps:
       - checkout:
-          path: /DiplodocusDB/Core
+          path: /diplodocusdb/core
       - run:
           name: Build
-          command: cd /DiplodocusDB/Core/Makefiles/GNUmakefile && make
+          command: cd /diplodocusdb/core/Makefiles/GNUmakefile && make
