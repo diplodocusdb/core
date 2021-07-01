@@ -17,30 +17,30 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Include\DiplodocusDB\DiplodocusDBCore.h">
+    <ClInclude Include="..\..\include\DiplodocusDB\DiplodocusDBCore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Include\DiplodocusDB\Core\PrimitiveDataType.h">
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\PrimitiveDataType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Include\DiplodocusDB\Core\DataTypeModifier.h">
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\DataTypeModifier.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Include\DiplodocusDB\Core\DataType.h">
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\DataType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Include\DiplodocusDB\Core\VersionNumber.h">
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\VersionNumber.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Include\DiplodocusDB\Core\linkoptions.h">
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\linkoptions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\DataType.cpp">
+    <ClCompile Include="..\..\src\DataType.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\VersionNumber.cpp">
+    <ClCompile Include="..\..\src\VersionNumber.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
