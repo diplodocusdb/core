@@ -50,26 +50,26 @@ _equal  = $(and $(findstring $(1),$(2)),$(findstring $(2),$(1)))
 builddir = .
 
 ifneq ($(builddir),.)
-_builddir := $(if $(findstring $(abspath $(builddir)),$(builddir)),,../../)$(builddir)/../GNUmakefile/
+_builddir := $(if $(findstring $(abspath $(builddir)),$(builddir)),,../../)$(builddir)/../gnumake/
 _builddir_error := $(shell mkdir -p $(_builddir) 2>&1)
 $(if $(_builddir_error),$(error Failed to create build directory: $(_builddir_error)))
 endif
-all: ../Bakefile/../../Lib/lib$(if $(call _equal,$(config),Debug),DiplodocusDBCore-d,DiplodocusDBCore).a
+all: ../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),DiplodocusDBCore-d,DiplodocusDBCore).a
 
-../Bakefile/../../Lib/lib$(if $(call _equal,$(config),Debug),DiplodocusDBCore-d,DiplodocusDBCore).a: $(_builddir)DiplodocusDBCore_DataType.o $(_builddir)DiplodocusDBCore_VersionNumber.o
+../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),DiplodocusDBCore-d,DiplodocusDBCore).a: $(_builddir)DiplodocusDBCore_DataType.o $(_builddir)DiplodocusDBCore_VersionNumber.o
 	$(AR) rc $@ $(_builddir)DiplodocusDBCore_DataType.o $(_builddir)DiplodocusDBCore_VersionNumber.o
 	$(RANLIB) $@
 
-$(_builddir)DiplodocusDBCore_DataType.o: ../../Source/DataType.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I../../Include/DiplodocusDB/Core -std=c++11 ../../Source/DataType.cpp
+$(_builddir)DiplodocusDBCore_DataType.o: ../../src/DataType.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I../../include/DiplodocusDB/Core -std=c++11 ../../src/DataType.cpp
 
-$(_builddir)DiplodocusDBCore_VersionNumber.o: ../../Source/VersionNumber.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I../../Include/DiplodocusDB/Core -std=c++11 ../../Source/VersionNumber.cpp
+$(_builddir)DiplodocusDBCore_VersionNumber.o: ../../src/VersionNumber.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I../../include/DiplodocusDB/Core -std=c++11 ../../src/VersionNumber.cpp
 
 clean:
 	rm -f $(_builddir)*.o
 	rm -f $(_builddir)*.d
-	rm -f ../Bakefile/../../Lib/lib$(if $(call _equal,$(config),Debug),DiplodocusDBCore-d,DiplodocusDBCore).a
+	rm -f ../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),DiplodocusDBCore-d,DiplodocusDBCore).a
 
 .PHONY: all clean
 
