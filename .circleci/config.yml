@@ -8,4 +8,4 @@ jobs:
           path: /diplodocusdb/core
       - run:
           name: Build
-          command: cd /diplodocusdb/core/build/GNUmakefile && make
+          command: cd /diplodocusdb/core/build/gnumake && make
