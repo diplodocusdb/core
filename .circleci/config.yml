@@ -2,10 +2,10 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ishikocpp/gcc-ishiko:1.0.0
+      - image: ishiko/gcc-ishiko-cpp:0.1.0
     steps:
       - checkout:
-          path: /DiplodocusDB/Core
+          path: /diplodocusdb/core
       - run:
           name: Build
-          command: cd /DiplodocusDB/Core/Makefiles/GNUmakefile && make
+          command: cd /diplodocusdb/core/build/gnumake && make

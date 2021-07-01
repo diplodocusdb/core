@@ -1,0 +1,45 @@
+toolsets = gnu vs2017 vs2015 vs2013;
+
+gnu.makefile = ../gnumake/GNUmakefile;
+vs2017.solutionfile = ../vc15/DiplodocusDBCore.sln;
+vs2015.solutionfile = ../vc14/DiplodocusDBCore.sln;
+vs2013.solutionfile = ../vc12/DiplodocusDBCore.sln;
+
+library DiplodocusDBCore
+{
+    archs = x86 x86_64;
+
+    includedirs += ../../include/DiplodocusDB/Core;
+   
+    if ($(toolset) == gnu)
+    {
+        cxx-compiler-options = "-std=c++11";
+        outputdir = ../../lib;
+    }
+
+    if ($(toolset) != gnu)
+    {
+        outputdir = ../../lib/$(arch);
+    }
+
+    if ($(config) == Debug)
+    {
+        basename = DiplodocusDBCore-d;
+    }
+
+    headers
+    {
+        ../../include/DiplodocusDB/DiplodocusDBCore.h
+        ../../include/DiplodocusDB/Core/PrimitiveDataType.h
+        ../../include/DiplodocusDB/Core/DataTypeModifier.h
+        ../../include/DiplodocusDB/Core/DataType.h
+        ../../include/DiplodocusDB/Core/VersionNumber.h
+        ../../include/DiplodocusDB/Core/linkoptions.h
+    }
+
+    sources
+    {
+        ../../src/DataType.cpp
+        ../../src/VersionNumber.cpp
+    }
+}
