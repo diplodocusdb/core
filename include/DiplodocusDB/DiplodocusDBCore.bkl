@@ -1,20 +1,20 @@
 setting DIPLODOCUSDB_CORE_ROOT
 {
     help = "Path to the DiplodocusDB installation";
-    default = '$(DIPLODOCUSDB)/Core';
+    default = '$(DIPLODOCUSDB)/core';
 }
 
 template DiplodocusDBCore
 {
-    includedirs += $(DIPLODOCUSDB_CORE_ROOT)/Include;
+    includedirs += $(DIPLODOCUSDB_CORE_ROOT)/include;
 
     if ($(toolset) == gnu)
     {
-        libdirs += $(DIPLODOCUSDB_CORE_ROOT)/Lib;
+        libdirs += $(DIPLODOCUSDB_CORE_ROOT)/lib;
     }
 
     if ($(toolset) != gnu)
     {
-        libdirs += $(DIPLODOCUSDB_CORE_ROOT)/Lib/$(arch);
+        libdirs += $(DIPLODOCUSDB_CORE_ROOT)/lib/$(arch);
     }
 }
