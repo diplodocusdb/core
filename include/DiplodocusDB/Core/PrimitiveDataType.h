@@ -36,10 +36,9 @@ enum class PrimitiveDataType
 
     unicodeString = 0x80,
 
-    localDate = 0xA0,
+    universalDateTime = 0xA0,
     localDateTime = 0xA1,
-    universalDate = 0xA2,
-    universalDateTime = 0xA3,
+    date = 0xA2,
     timeOfDay = 0xA3,
 };
 
