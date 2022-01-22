@@ -1,11 +1,11 @@
 /*
-    Copyright (c) 2017-2021 Xavier Leclercq
+    Copyright (c) 2017-2022 Xavier Leclercq
     Released under the MIT License
     See https://github.com/diplodocusdb/core/blob/main/LICENSE.txt
 */
 
-#ifndef _DIPLODOCUSDB_CORE_PRIMITIVEDATATYPE_H_
-#define _DIPLODOCUSDB_CORE_PRIMITIVEDATATYPE_H_
+#ifndef _DIPLODOCUSDB_CORE_PRIMITIVEDATATYPE_HPP_
+#define _DIPLODOCUSDB_CORE_PRIMITIVEDATATYPE_HPP_
 
 namespace DiplodocusDB
 {
