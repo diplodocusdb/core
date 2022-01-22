@@ -30,12 +30,12 @@ library DiplodocusDBCore
 
     headers
     {
-        ../../include/DiplodocusDB/DiplodocusDBCore.h
-        ../../include/DiplodocusDB/Core/PrimitiveDataType.h
-        ../../include/DiplodocusDB/Core/DataTypeModifier.h
-        ../../include/DiplodocusDB/Core/DataType.h
-        ../../include/DiplodocusDB/Core/VersionNumber.h
-        ../../include/DiplodocusDB/Core/linkoptions.h
+        ../../include/DiplodocusDB/Core.hpp
+        ../../include/DiplodocusDB/Core/PrimitiveDataType.hpp
+        ../../include/DiplodocusDB/Core/DataTypeModifier.hpp
+        ../../include/DiplodocusDB/Core/DataType.hpp
+        ../../include/DiplodocusDB/Core/VersionNumber.hpp
+        ../../include/DiplodocusDB/Core/linkoptions.hpp
     }
 
     sources

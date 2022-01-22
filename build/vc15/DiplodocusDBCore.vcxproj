@@ -154,12 +154,12 @@
     <ClCompile Include="..\..\src\VersionNumber.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\DiplodocusDB\DiplodocusDBCore.h" />
-    <ClInclude Include="..\..\include\DiplodocusDB\Core\PrimitiveDataType.h" />
-    <ClInclude Include="..\..\include\DiplodocusDB\Core\DataTypeModifier.h" />
-    <ClInclude Include="..\..\include\DiplodocusDB\Core\DataType.h" />
-    <ClInclude Include="..\..\include\DiplodocusDB\Core\VersionNumber.h" />
-    <ClInclude Include="..\..\include\DiplodocusDB\Core\linkoptions.h" />
+    <ClInclude Include="..\..\include\DiplodocusDB\Core.hpp" />
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\PrimitiveDataType.hpp" />
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\DataTypeModifier.hpp" />
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\DataType.hpp" />
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\VersionNumber.hpp" />
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\linkoptions.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
