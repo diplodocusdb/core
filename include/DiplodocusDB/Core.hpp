@@ -9,8 +9,8 @@
 
 #include "Core/DataType.hpp"
 #include "Core/DataTypeModifier.hpp"
-#include "Core/PrimitiveDataType.hpp"
-
 #include "Core/linkoptions.hpp"
+#include "Core/PrimitiveDataType.hpp"
+#include "Core/VersionNumber.hpp"
 
 #endif
