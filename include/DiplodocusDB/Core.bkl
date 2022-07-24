@@ -1,10 +1,13 @@
+ishikopath = envvar("ISHIKO_CPP");
+import $(ishikopath)/third-party-glue/include/Ishiko/ThirdParty/Boost.bkl;
+
 setting DIPLODOCUSDB_CORE_ROOT
 {
     help = "Path to the DiplodocusDB installation";
     default = '$(DIPLODOCUSDB)/core';
 }
 
-template DiplodocusDBCore
+template DiplodocusDBCore : Boost
 {
     includedirs += $(DIPLODOCUSDB_CORE_ROOT)/include;
 

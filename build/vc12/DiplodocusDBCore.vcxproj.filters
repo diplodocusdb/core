@@ -29,6 +29,9 @@
     <ClInclude Include="..\..\include\DiplodocusDB\Core\DataType.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\DiplodocusDB\Core\Value.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\include\DiplodocusDB\Core\VersionNumber.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -38,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\DataType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Value.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\VersionNumber.cpp">
