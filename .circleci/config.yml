@@ -17,7 +17,7 @@ jobs:
           command: cd /projects/diplodocusdb/core/tests/build/gnumake && make
       - run:
           name: "Run: DiplodocusDB Core tests"
-          command: cd /projects/diplodocusdb/core/tests/build/gnumake && ./DiplodocusCoreTests
+          command: cd /projects/diplodocusdb/core/tests/build/gnumake && ./DiplodocusDBCoreTests
 workflows:
   version: 2
   continuous_build:
