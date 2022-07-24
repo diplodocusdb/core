@@ -25,8 +25,14 @@ program DiplodocusDBCoreTests : DiplodocusDBCore, IshikoTestFramework
         archs = x86 x86_64;
     }
 
+    headers
+    {
+        ../../src/ValueTests.hpp
+    }
+
     sources
     {
         ../../src/main.cpp
+        ../../src/ValueTests.cpp
     }
 }
