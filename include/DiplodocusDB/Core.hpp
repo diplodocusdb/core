@@ -11,6 +11,7 @@
 #include "Core/DataTypeModifier.hpp"
 #include "Core/linkoptions.hpp"
 #include "Core/PrimitiveDataType.hpp"
+#include "Core/Value.hpp"
 #include "Core/VersionNumber.hpp"
 
 #endif

@@ -1,3 +1,6 @@
+ishikopath = envvar("ISHIKO_CPP");
+import $(ishikopath)/third-party-glue/include/Ishiko/ThirdParty/Boost.bkl;
+
 toolsets = gnu vs2019 vs2017 vs2015 vs2013;
 
 gnu.makefile = ../gnumake/GNUmakefile;
@@ -6,7 +9,7 @@ vs2017.solutionfile = ../vc15/DiplodocusDBCore.sln;
 vs2015.solutionfile = ../vc14/DiplodocusDBCore.sln;
 vs2013.solutionfile = ../vc12/DiplodocusDBCore.sln;
 
-library DiplodocusDBCore
+library DiplodocusDBCore : Boost
 {
     archs = x86 x86_64;
 
@@ -34,6 +37,7 @@ library DiplodocusDBCore
         ../../include/DiplodocusDB/Core/PrimitiveDataType.hpp
         ../../include/DiplodocusDB/Core/DataTypeModifier.hpp
         ../../include/DiplodocusDB/Core/DataType.hpp
+        ../../include/DiplodocusDB/Core/Value.hpp
         ../../include/DiplodocusDB/Core/VersionNumber.hpp
         ../../include/DiplodocusDB/Core/linkoptions.hpp
     }
@@ -41,6 +45,7 @@ library DiplodocusDBCore
     sources
     {
         ../../src/DataType.cpp
+        ../../src/Value.cpp
         ../../src/VersionNumber.cpp
     }
 }
