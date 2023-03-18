@@ -1,5 +1,6 @@
 ishikopath = envvar("ISHIKO_CPP");
 import $(ishikopath)/third-party-glue/include/Ishiko/ThirdParty/Boost.bkl;
+import $(ishikopath)/time/include/Ishiko/Time.bkl;
 
 setting DIPLODOCUSDB_CORE_ROOT
 {
@@ -7,7 +8,7 @@ setting DIPLODOCUSDB_CORE_ROOT
     default = '$(DIPLODOCUSDB)/core';
 }
 
-template DiplodocusDBCore : Boost
+template DiplodocusDBCore : IshikoTime, Boost
 {
     includedirs += $(DIPLODOCUSDB_CORE_ROOT)/include;
 
