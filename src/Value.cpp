@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2018-2022 Xavier Leclercq
+    Copyright (c) 2018-2023 Xavier Leclercq
     Released under the MIT License
     See https://github.com/diplodocusdb/core/blob/main/LICENSE.txt
 */
@@ -7,6 +7,8 @@
 #include "Value.hpp"
 
 using namespace DiplodocusDB;
+
+namespace iko = Ishiko;
 
 Value::Value()
     : m_type(PrimitiveDataType::null)
@@ -76,10 +78,24 @@ Value Value::Binary(const std::string& data)
     return result;
 }
 
-Value Value::Date(const boost::gregorian::date& data)
+Value Value::Date(iko::Date data)
 {
     Value result;
     result.setDate(data);
+    return result;
+}
+
+Value Value::Date(boost::gregorian::date data)
+{
+    Value result;
+    result.setDate(data);
+    return result;
+}
+
+Value Value::TimeOfDay(const iko::TimeOfDay& data)
+{
+    Value result;
+    result.setTimeOfDay(data);
     return result;
 }
 
@@ -133,9 +149,9 @@ const std::string& Value::asBinary() const
     return boost::get<std::string>(m_data);
 }
 
-const boost::gregorian::date& Value::asDate() const
+Ishiko::Date Value::asDate() const
 {
-    return boost::get<boost::gregorian::date>(m_data);
+    return boost::get<iko::Date>(m_data);
 }
 
 bool Value::operator ==(const Value& other) const
@@ -202,8 +218,14 @@ void Value::setBinary(const std::string& data)
     m_data = data;
 }
 
-void Value::setDate(const boost::gregorian::date& data)
+void Value::setDate(iko::Date data)
 {
     m_type = PrimitiveDataType::date;
+    m_data = data;
+}
+
+void Value::setTimeOfDay(const iko::TimeOfDay& data)
+{
+    m_type = PrimitiveDataType::timeOfDay;
     m_data = data;
 }

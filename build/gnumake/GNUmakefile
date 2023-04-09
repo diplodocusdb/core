@@ -38,6 +38,8 @@ endif
 # settings:
 #
 #      ISHIKO_CPP_BOOST_ROOT  Path to the Boost installation
+#      ISHIKO_CPP_FMT_ROOT    Path to the fmt installation
+#      ISHIKO_CPP_TIME_ROOT   Path to the Ishiko Timeinstallation
 
 # Use "make RANLIB=''" for platforms without ranlib.
 RANLIB ?= ranlib
@@ -66,6 +68,10 @@ endif
 
 # Path to the Boost installation
 ISHIKO_CPP_BOOST_ROOT ?= $(ISHIKO_CPP_THIRD_PARTY_BOOST)
+# Path to the fmt installation
+ISHIKO_CPP_FMT_ROOT ?= $(ISHIKO_CPP_THIRD_PARTY_FMT)
+# Path to the Ishiko Timeinstallation
+ISHIKO_CPP_TIME_ROOT ?= $(ISHIKO_CPP)/time
 
 # ------------
 
@@ -76,13 +82,13 @@ all: ../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),DiplodocusDBCo
 	$(RANLIB) $@
 
 $(_builddir)DiplodocusDBCore_DataType.o: ../../src/DataType.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/DiplodocusDB/Core -std=c++11 ../../src/DataType.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_TIME_ROOT)/include -I../../include/DiplodocusDB/Core -std=c++11 ../../src/DataType.cpp
 
 $(_builddir)DiplodocusDBCore_Value.o: ../../src/Value.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/DiplodocusDB/Core -std=c++11 ../../src/Value.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_TIME_ROOT)/include -I../../include/DiplodocusDB/Core -std=c++11 ../../src/Value.cpp
 
 $(_builddir)DiplodocusDBCore_VersionNumber.o: ../../src/VersionNumber.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/DiplodocusDB/Core -std=c++11 ../../src/VersionNumber.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_TIME_ROOT)/include -I../../include/DiplodocusDB/Core -std=c++11 ../../src/VersionNumber.cpp
 
 clean:
 	rm -f $(_builddir)*.o
