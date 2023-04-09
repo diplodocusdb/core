@@ -1,13 +1,14 @@
 /*
-    Copyright (c) 2018-2022 Xavier Leclercq
+    Copyright (c) 2018-2023 Xavier Leclercq
     Released under the MIT License
     See https://github.com/diplodocusdb/core/blob/main/LICENSE.txt
 */
 
-#ifndef _DIPLODOCUSDB_CORE_VALUE_HPP_
-#define _DIPLODOCUSDB_CORE_VALUE_HPP_
+#ifndef GUARD_DIPLODOCUSDB_CORE_VALUE_HPP
+#define GUARD_DIPLODOCUSDB_CORE_VALUE_HPP
 
 #include "DataType.hpp"
+#include <Ishiko/Time.hpp>
 #include <boost/date_time.hpp>
 #include <boost/variant.hpp>
 #include <string>
@@ -45,7 +46,9 @@ public:
     */
     static Value UTF8String(const std::string& data);
     static Value Binary(const std::string& data);
-    static Value Date(const boost::gregorian::date& data);
+    static Value Date(Ishiko::Date data);
+    static Value Date(boost::gregorian::date data);
+    static Value TimeOfDay(const Ishiko::TimeOfDay& data);
     
     /// Returns the type of the data.
     const DataType& type() const;
@@ -59,7 +62,7 @@ public:
     double asDouble() const;
     const std::string& asUTF8String() const;
     const std::string& asBinary() const;
-    const boost::gregorian::date& asDate() const;
+    Ishiko::Date asDate() const;
 
     bool operator ==(const Value& other) const;
     bool operator !=(const Value& other) const;
@@ -73,11 +76,13 @@ public:
     void setDouble(double data);
     void setUTF8String(const std::string& data);
     void setBinary(const std::string& data);
-    void setDate(const boost::gregorian::date& data);
+    void setDate(Ishiko::Date data);
+    void setTimeOfDay(const Ishiko::TimeOfDay& data);
 
 private:
     DataType m_type;
-    boost::variant<bool, int8_t, int16_t,int32_t, int64_t, uint64_t, double, std::string, boost::gregorian::date> m_data;
+    boost::variant<bool, int8_t, int16_t,int32_t, int64_t, uint64_t, double, std::string, Ishiko::Date,
+        Ishiko::TimeOfDay> m_data;
 };
 
 }

@@ -1,5 +1,6 @@
 ishikopath = envvar("ISHIKO_CPP");
 import $(ishikopath)/third-party-glue/include/Ishiko/ThirdParty/Boost.bkl;
+import $(ishikopath)/time/include/Ishiko/Time.bkl;
 
 toolsets = gnu vs2019 vs2017 vs2015 vs2013;
 
@@ -9,7 +10,7 @@ vs2017.solutionfile = ../vc15/DiplodocusDBCore.sln;
 vs2015.solutionfile = ../vc14/DiplodocusDBCore.sln;
 vs2013.solutionfile = ../vc12/DiplodocusDBCore.sln;
 
-library DiplodocusDBCore : Boost
+library DiplodocusDBCore : IshikoTime, Boost
 {
     archs = x86 x86_64;
 
