@@ -39,7 +39,7 @@ endif
 #
 #      ISHIKO_CPP_BOOST_ROOT  Path to the Boost installation
 #      ISHIKO_CPP_FMT_ROOT    Path to the fmt installation
-#      ISHIKO_CPP_TIME_ROOT   Path to the Ishiko Timeinstallation
+#      ISHIKO_CPP_TIME_ROOT   Path to the Ishiko/C++ Time installation
 
 # Use "make RANLIB=''" for platforms without ranlib.
 RANLIB ?= ranlib
@@ -70,8 +70,8 @@ endif
 ISHIKO_CPP_BOOST_ROOT ?= $(BOOST_ROOT)
 # Path to the fmt installation
 ISHIKO_CPP_FMT_ROOT ?= $(FMT_ROOT)
-# Path to the Ishiko Timeinstallation
-ISHIKO_CPP_TIME_ROOT ?= $(ISHIKO_CPP)/time
+# Path to the Ishiko/C++ Time installation
+ISHIKO_CPP_TIME_ROOT ?= $(ISHIKO_CPP_ROOT)/time
 
 # ------------
 
