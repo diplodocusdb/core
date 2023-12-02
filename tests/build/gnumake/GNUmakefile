@@ -82,7 +82,7 @@ ISHIKO_CPP_FMT_ROOT ?= $(FMT_ROOT)
 # Path to the Ishiko/C++ Time installation
 ISHIKO_CPP_TIME_ROOT ?= $(ISHIKO_CPP_ROOT)/time
 # Path to the DiplodocusDB installation
-DIPLODOCUSDB_CORE_ROOT ?= $(DIPLODOCUSDB)/core
+DIPLODOCUSDB_CORE_ROOT ?= $(DIPLODOCUSDB_ROOT)/core
 # Path to the Ishiko/C++ BasePlatform installation
 ISHIKO_CPP_BASEPLATFORM_ROOT ?= $(ISHIKO_CPP_ROOT)/base-platform
 # Path to the Ishiko/C++ Errors installation

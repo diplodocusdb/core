@@ -5,7 +5,7 @@ import $(ishikopath)/time/include/Ishiko/Time.bkl;
 setting DIPLODOCUSDB_CORE_ROOT
 {
     help = "Path to the DiplodocusDB installation";
-    default = '$(DIPLODOCUSDB)/core';
+    default = '$(DIPLODOCUSDB_ROOT)/core';
 }
 
 template DiplodocusDBCore : IshikoTime, Boost
