@@ -154,6 +154,11 @@ Ishiko::Date Value::asDate() const
     return boost::get<iko::Date>(m_data);
 }
 
+Ishiko::TimeOfDay Value::asTimeOfDay() const
+{
+    return boost::get<iko::TimeOfDay>(m_data);
+}
+
 bool Value::operator ==(const Value& other) const
 {
     return ((m_type == other.m_type) && (m_data == other.m_data));
