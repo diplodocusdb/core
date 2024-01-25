@@ -63,6 +63,7 @@ public:
     const std::string& asUTF8String() const;
     const std::string& asBinary() const;
     Ishiko::Date asDate() const;
+    Ishiko::TimeOfDay asTimeOfDay() const;
 
     bool operator ==(const Value& other) const;
     bool operator !=(const Value& other) const;
