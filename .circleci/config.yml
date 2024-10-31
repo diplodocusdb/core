@@ -2,22 +2,22 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ishiko/gcc-ishiko-cpp:0.41.0
+      - image: ishiko/gcc-ishiko-cpp:0.42.0
     steps:
       - run: 
           name: "Set DIPLODOCUSDB environment variable and create workspace directory"
-          command: mkdir -p /projects/diplodocusdb && echo 'export DIPLODOCUSDB_ROOT="/projects/diplodocusdb"' >> $BASH_ENV
+          command: mkdir -p /workspace/projects/diplodocusdb && echo 'export DIPLODOCUSDB_ROOT="/workspace/projects/diplodocusdb"' >> $BASH_ENV
       - checkout:
-          path: /projects/diplodocusdb/core
+          path: /workspace/projects/diplodocusdb/core
       - run:
           name: "Build: DiplodocusDB Core"
-          command: cd /projects/diplodocusdb/core/build/gnumake && make
+          command: cd /workspace/projects/diplodocusdb/core/build-files/gnumake && make
       - run:
           name: "Build: DiplodocusDB Core tests"
-          command: cd /projects/diplodocusdb/core/tests/build/gnumake && make
+          command: cd /workspace/projects/diplodocusdb/core/tests/build-files/gnumake && make
       - run:
           name: "Run: DiplodocusDB Core tests"
-          command: cd /projects/diplodocusdb/core/tests/build/gnumake && ./DiplodocusDBCoreTests
+          command: cd /workspace/projects/diplodocusdb/core/tests/build-files/gnumake && ./DiplodocusDBCoreTests
 workflows:
   version: 2
   continuous_build:
